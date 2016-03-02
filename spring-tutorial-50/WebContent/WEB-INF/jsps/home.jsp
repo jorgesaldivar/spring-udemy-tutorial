@@ -9,6 +9,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<p><a href="offers">offers</a></p>
+<p><a href="createoffer">create offer</a></p>
 	
 	<sql:query var="rs" dataSource="jdbc/TestDB">
 		select id, name, email from offers;
@@ -27,6 +30,13 @@
 		Request EL : ${name}
 
 		<c:out value="${name}"></c:out>
+	</p>
+	
+	
+	<p>
+	<c:forEach var="offer" items="${offers}">
+		<c:out value="${offer.email}"></c:out>
+	</c:forEach>
 	</p>
 </body>
 </html>
