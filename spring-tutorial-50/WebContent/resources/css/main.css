@@ -1,0 +1,31 @@
+@CHARSET "ISO-8859-1";
+
+.formtable {
+	padding: 10px;
+	border: 1px solid blue;
+}
+
+input[type=text] {
+	width: 250px;
+}
+
+textarea {
+	width: 250px;
+	height: 200px;
+}
+
+.label {
+	text-align: right;
+	vertical-align: top;
+}
+
+.error {
+	font-size: 10px;
+	color: red;
+	left-margin: left;
+}
+
+table.offers {
+	padding: 10px;
+	border: 1px solid grey;
+}

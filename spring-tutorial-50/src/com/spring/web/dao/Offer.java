@@ -1,10 +1,24 @@
 package com.spring.web.dao;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import com.spring.web.validation.ValidEmail;
+
 public class Offer {
 
 	private int id;
+	
+	@Size(min=5, max=100, message="message should be between 5 to 10")
 	private String name;
+	
+	@NotNull
+	//@Pattern(regexp=".*\\@.*\\..*", message="invalid email")
+	@ValidEmail(min=6, message="not valid")
 	private String email;
+	
+	@Size(min=5, max=100, message="message should be between 5 to 100")
 	private String text;
 
 	public Offer() {
