@@ -2,8 +2,8 @@ package com.spring.aop;
 
 import org.springframework.stereotype.Component;
 
-@Component
-public class Camera {
+@Component("camera")
+public class Camera implements PhotoSnapper {
 
 	public void snap() {
 		System.out.println("snap");

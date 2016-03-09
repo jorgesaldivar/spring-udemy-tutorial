@@ -8,7 +8,14 @@ public class App {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
 				"com/spring/aop/beans.xml");
 		
+		Object obj = context.getBean("camera");
+		System.out.println(obj.getClass());
+		if(obj instanceof Camera) System.out.println("true");
+		
 		Camera camera = (Camera)context.getBean("camera");
+		
+		System.out.println(camera.getClass());
+		
 		camera.snap();
 		context.close();
 	}
